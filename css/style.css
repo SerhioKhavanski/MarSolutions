@@ -17,18 +17,21 @@
     font-weight: 700;
 }
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body{
     background-color: #151414;
-    margin: 0;
 }
 /* ------------------mainSettings-------------------- */
 h1 {
   font-size: clamp(28px, 5vw, 48px); 
   line-height: 1.2;
   font-family: Fira-Sans;
-    color:var(--text-color);
+  color:var(--text-color);
+  margin-bottom: 3%;
+  margin-top: 15%;
 }
 
 h2 {
@@ -54,7 +57,7 @@ a {
   color:var(--text-color);
 }
 
-p {
+p, #search::placeholder,#search{
   font-size: clamp(14px, 2vw, 18px); 
   line-height: 1.7;
   font-family:ALS-Schlange-Sans;
@@ -65,6 +68,7 @@ p {
     display: none;
 }
 .menu__box{
+    margin-top: 1.45%;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -73,6 +77,29 @@ p {
 }
 .menu__box img{
     width: 100%;
+}
+.button{
+    background-color:#22ABE2;
+    padding: 10px 20px;
+}
+#search{
+    width: 150px;
+    background-color:transparent;
+    outline: none;
+    border:2px solid #848484;
+    color: white;
+    padding: 5px 10px 5px 40px;
+    background-image:url(../img/Search.png);
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-position-y:center;
+}
+.search{
+    display: flex;
+    gap:5%;
+}
+.secondaryMenu{
+    padding: 5px 20px;
 }
 /* ------------------menu-------------------- */
 .indentationLeft{
@@ -116,6 +143,15 @@ header{
     flex-direction: column;
     justify-content: center;
 }
+.secondary{
+    background-color:transparent;
+        border:2px solid #22ABE2;
+}
+.cta{
+    display: flex;
+    gap:5%;
+    margin-top: 8%;
+}
 /*-------------------headedr----------------*/
 #bg-video {
   position: absolute;
@@ -129,7 +165,7 @@ header{
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.66) 60%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.933) 30%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0) 100%);
   z-index: -1;
   pointer-events: none;
 }
