@@ -1,0 +1,255 @@
+:root{
+    --text-color:white;
+}
+@font-face {
+    font-family:"ALS-Schlange-Sans";
+    src: url(../fonts/ALS-Schlange-Sans-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family:"ALS-Schlange-Sans";
+    src: url(../fonts/ALS-Schlange-Ssans-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family:"Fira-Sans";
+    src: url(../fonts/Fira-Sans-Bold.ttf);
+    font-weight: 700;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #151414;
+}
+/* ------------------mainSettings-------------------- */
+h1 {
+  font-size: clamp(28px, 5vw, 48px); 
+  line-height: 1.2;
+  font-family: Fira-Sans;
+    color:var(--text-color);
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.3;
+  font-family: Fira-Sans;
+  color:var(--text-color);
+}
+
+h3 {
+  font-size: clamp(20px, 3vw, 28px); 
+  line-height: 1.4;
+  font-family: Fira-Sans;
+  color:var(--text-color);
+}
+
+a {
+  font-size: clamp(14px, 2vw, 18px);
+  text-decoration: none;
+  line-height: 1.6;
+  font-family:ALS-Schlange-Sans;
+  font-weight: 700;
+  color:var(--text-color);
+}
+
+p {
+  font-size: clamp(14px, 2vw, 18px); 
+  line-height: 1.7;
+  font-family:ALS-Schlange-Sans;
+  color:var(--text-color);
+}
+/* ------------------Typography-------------------- */
+#menu__toggle{
+    display: none;
+}
+.menu__box{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0;
+}
+.menu__box img{
+    width: 100%;
+}
+/* ------------------menu-------------------- */
+.indentationLeft{
+    grid-area: l;
+}
+.indentationRight{
+    grid-area: r;
+}
+nav{
+    grid-area: n;
+}
+.hero-info{
+    grid-area: t;
+}
+.hero-img{
+    grid-area: i;
+}
+header{
+    background-image: url(../img/grid.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:7% 33% 53% 7%; 
+    grid-template-rows:10% auto;
+    grid-template-areas: 
+                        "l n n r"
+                        "l t i r";
+}
+.hero-img{
+    display: flex;
+    align-items: end;
+}
+.hero-img>img{
+    width: 100%;
+    transform: translateX(2%);
+}
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    #menu__toggle {
+    opacity: 0;
+    }
+    .menu__btn {
+    display: flex; 
+    align-items: center;  
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    }
+    .menu__btn > span::before {
+    content: '';
+    top: -8px;
+    }
+    .menu__btn > span::after {
+    content: '';
+    top: 8px;
+    }
+    .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    }
+    .menu__item:hover {
+    background-color: #CFD8DC;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+    transition-duration: .25s;
+    }
+    .menu__box {
+    transition-duration: .25s;
+    }
+    .menu__item {
+    transition-duration: .25s;
+    }
+}
+/* @media (prefers-color-scheme: dark) {
+
+} Меняем тему, сделаем чуть позже*/
