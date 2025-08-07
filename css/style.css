@@ -129,9 +129,9 @@ header{
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgb(0, 0, 0),  rgba(0, 0, 0, 0));
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.66) 60%, rgba(0, 0, 0, 0) 100%);
   z-index: -1;
-  pointer-events: none; /* чтобы не мешать кликам */
+  pointer-events: none;
 }
 
 
