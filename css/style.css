@@ -1,5 +1,6 @@
 :root{
     --text-color:white;
+    --index:calc(1vh + 1vw);
 }
 @font-face {
     font-family:"ALS-Schlange-Sans";
@@ -26,27 +27,26 @@ body{
 }
 /* ------------------mainSettings-------------------- */
 h1 {
-  font-size: clamp(28px, 5vw, 48px); 
+  font-size: calc(var(--index)*1.7); 
   line-height: 1.2;
   font-family: Fira-Sans;
   color:var(--text-color);
   margin-bottom: 3%;
-  margin-top: 15%;
 }
 
 h2 {
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: calc(var(--index)*1.3);
   line-height: 1.3;
   font-family: Fira-Sans;
   color:var(--text-color);
-  margin-bottom: 3%;
 }
 
 h3 {
-  font-size: clamp(20px, 3vw, 28px); 
+  font-size: calc(var(--index)*1); 
   line-height: 1.4;
   font-family: Fira-Sans;
   color:var(--text-color);
+  margin-bottom: 1%;
 }
 
 a {
@@ -59,7 +59,7 @@ a {
 }
 
 p, #search::placeholder,#search{
-  font-size: clamp(14px, 2vw, 18px); 
+  font-size: calc(var(--index)*0.64); 
   line-height: 1.7;
   font-family:ALS-Schlange-Sans;
   color:var(--text-color);
@@ -114,9 +114,11 @@ nav{
 }
 .hero-info{
     grid-area: t;
+    align-self: self-end;
 }
 .hero-img{
     grid-area: i;
+        align-self: self-end;
 }
 header{
     position: relative;
@@ -143,6 +145,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20vh;
 }
 .secondary{
     background-color:transparent;
@@ -166,14 +169,17 @@ header{
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.933) 30%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.812) 60%, rgba(0, 0, 0, 0.097) 100%);
     z-index: -1;
     pointer-events: none;
 }
 /*-------------------video----------------*/
 
-.clients{
-    margin-top: 5%;
+.clients,.solutions{
+    margin: 5% 0;
+}
+.clients h2{
+      margin-bottom: 3%;
 }
 .clients-text{
     width: 40%;
@@ -188,7 +194,7 @@ header{
     overflow: hidden;
     display: flex;
         > * {
-        flex: 0 0 100%;
+        flex: 0 0 80%;
     }
         &:hover .group {
         animation-play-state: paused;
@@ -196,11 +202,8 @@ header{
 }
 .carousel-item {
     width: 100%;
-    color: white;
-    border-radius: 24px;
-    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
     padding: 20px;
-    font-size: xx-large;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -220,13 +223,73 @@ header{
     transform: translateX(-100%);
   }
 }
+/*-------------------clients----------------*/
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.about-solutions-header{
+    grid-area: ash;
+}
+.about-solutions-cards{
+    grid-area: asc;
+}
+.about-solutions{
+    padding: 0 7%;
+    background-image: url(../img/product-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas: 
+                        "ash"
+                        "asc";
+}
+.heading>img{
+    opacity: 0.2;
+}
+.solution-card {
+  width: 45%;
+  background-color: #00142b8c;
+  backdrop-filter: blur(40px);
+  padding: 30px;
+  height: 60vh;
+  position: relative;
+  overflow: visible;  
+  border:1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.about-solutions-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.image-wrapper {
+  position: relative;
+  overflow: visible;
+}
 
-
-
-
-
-
-
+.image-wrapper img {
+  width: 100%;
+  position: relative;
+  top: -4vh; 
+  left: 0;
+}
+.solution-card>p{
+    margin-bottom: 4%;
+}
+.solution-card{
+    transform: translateY(15%);
+}
+.solution-card-button{
+    display: inline-block;
+    width:fit-content;
+}
 
 
 
