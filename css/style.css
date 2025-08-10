@@ -80,6 +80,11 @@ p, #search::placeholder,#search{
     width: 100%;
 }
 .button{
+    display: inline-block;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     background-color:#22ABE2;
     padding: 10px 20px;
 }
@@ -94,21 +99,16 @@ p, #search::placeholder,#search{
     background-repeat: no-repeat;
     background-position-x: 10%;
     background-position-y:center;
+    margin-right: 20px;
 }
 .search{
     display: flex;
-    gap:5%;
+
 }
 .secondaryMenu{
     padding: 5px 20px;
 }
 /* ------------------menu-------------------- */
-.indentationLeft{
-    grid-area: l;
-}
-.indentationRight{
-    grid-area: r;
-}
 nav{
     grid-area: n;
 }
@@ -121,17 +121,19 @@ nav{
         align-self: self-end;
 }
 header{
+    padding-left: 7%;
+    padding-right: 7%;
     position: relative;
     background-image: url(../img/grid.png);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns:7% 33% 53% 7%; 
+    grid-template-columns:40% 60%; 
     grid-template-rows:10% auto;
     grid-template-areas: 
-                        "l n n r"
-                        "l t i r";
+                        "n n"
+                        "t i";
 }
 .hero-img{
     display: flex;
