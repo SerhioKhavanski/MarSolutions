@@ -540,7 +540,44 @@ footer{
     justify-content: space-between;
     
 }
+.map-point a{
+    font-weight: 400;
+}
+.map{
 
+    width: 15%;
+}
+.map-point{
+    list-style: none;
+}
+.footer-main-info{
+    width: 25%;
+}
+.location-info{
+    margin-top: 4%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.location
+{
+    width: 13%;
+}
+.location-info-img-wrapper{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #d9d9d95d;
+    border: 1px solid #A2A2A2;
+}
+.map-point>li{
+    margin-top: 4%;
+}
+.footer-main-info>img{
+    margin-bottom: 4%;
+}
 
 
 
