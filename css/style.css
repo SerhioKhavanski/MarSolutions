@@ -490,17 +490,47 @@ header{
 .second-news-company{
     grid-area: snc;
 }
+.know-more{
+    grid-area: km;
+}
 .news{
     height: 100vh;
     padding: 0 7%;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
     gap: 20px;
     grid-template-areas: 
                         "nhp nhc nhc"
                         "fnp fnc snc"
-                        "snp fnc snc";
+                        "snp fnc snc"
+                        "km km km";
+    background: #151414;
+    background: radial-gradient(circle,rgba(21, 20, 20, 1) 0%, rgba(30, 69, 84, 1) 0%, rgba(24, 38, 44, 1) 15%, rgba(21, 20, 20, 1) 29%);
+}
+.news-header-product,.news-header-company{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.first-news-product,
+.second-news-product,
+.first-news-company,
+.second-news-company{
+    border: 4px solid #333233;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.first-news-product>p,
+.second-news-product>p,
+.first-news-company>p,
+.second-news-company>p{
+    margin-bottom: 3vh;
+}
+.know-more-btn{
+    margin: auto;
 }
 
 
