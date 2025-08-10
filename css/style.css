@@ -533,7 +533,13 @@ header{
     margin: auto;
 }
 
-
+/* ---------------------------------news-------------------------- */
+footer{
+    padding: 7%;
+    display: flex;
+    justify-content: space-between;
+    
+}
 
 
 
