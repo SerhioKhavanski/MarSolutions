@@ -811,8 +811,6 @@ footer{
     }
     .news {
     height: auto;
-
-;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 1fr 4fr 1fr;
     grid-template-areas:
@@ -846,6 +844,25 @@ footer{
     .carousel-item {
          width: 20%;
     }
+}
+@media(max-width:425px) {
+        :root{
+    --index:calc(1vh + 1vw)*1.48;
+    }
+        .news {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr calc(400px * var(--az)) calc(400px * var(--az)) 1fr calc(400px * var(--az)) calc(400px * var(--az)) 1fr;
+    grid-template-areas:
+        "nhp"
+        "fnp"
+        "snp"
+        "nhc"
+        "fnc"
+        "snc"
+        "km";
+   
+}
 }
     
 /* @media (prefers-color-scheme: dark) {
