@@ -503,7 +503,7 @@ header{
 }
 /* ---------------------------------reviews-------------------------- */
 .contact-us{
-    padding: 7%;
+    padding: 0 7%;
     background:linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.815) 30%, rgba(0, 0, 0, 0.624) 60%, rgba(0, 0, 0, 0) 100%) ,url(../img/cta-img.png);
     height: 80vh;
     background-size: cover;
@@ -801,6 +801,7 @@ footer{
     .contact-us{
         height: auto;
         flex-direction:column-reverse;
+        padding: 7%;
     }
     .contact-us-text{
         width: 100%;
@@ -862,9 +863,88 @@ footer{
         "snc"
         "km";
    
-}
+    }
+    .map{
+        width: 48%;
+    }
+    .footer-main-info{
+        width: 100%;
+    }
+    .location {
+        width: 49%;
+    }
+    .location-info{
+        width: 100%;
+    }
+    .last-point{
+        margin-top: calc(40px * var(--az));
+    }
+    .about-solutions{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-solutions-cards{
+        height: auto;
+    }
+    .solution-card{
+        height: 50vh;
+        margin-top: 0;
+        padding:  calc(20px * var(--az));
+    }
+    .solution-card:first-child{
+        margin-top: calc(10px * var(--az));
+    }
+    .solution-card:last-child{
+       margin-top: calc(120px * var(--az));
+       margin-bottom: calc(120px * var(--az));
+    }
+    .location-info-img-wrapper {
+        width: calc(40px * var(--az));
+        height: calc(40px * var(--az));
+    }
+    .button {
+        text-align: center;
+    }
+    .image-wrapper img {
+        top: -2vh;
+    }
+    .our-works-gallery-trigger, .review-trigger {
+        width: 30px;
+        height: 30px;
+          padding: 0.2em 0.5em;
+
+    }
+    .review-text {
+        background-color: #151414;
+        padding: calc(12px * var(--az));
+    }
+    .review {
+        width: 90%;
+    }
+    .client-log {
+        width: calc(80px * var(--az));
+        height: calc(80px * var(--az));
+        left: 60%;
+        top: 6%;
+    }
+    .client-log>img {
+        width: calc(30px * var(--az));
+    }
+    .our-works-counter {
+        width: calc(10px * var(--az));
+        height: calc(10px * var(--az));
+    }
+    .our-works-work {
+        padding: 0;
+    }
+    .our-works-info-button{
+        margin: auto;
+        margin-top: 6%;
+    }
 }
     
-/* @media (prefers-color-scheme: dark) {
-
-} Меняем тему, сделаем чуть позже */
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #ffffff;
+    }
+} 
