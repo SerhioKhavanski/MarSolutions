@@ -3,7 +3,12 @@
     --index:calc(1vh + 1vw);
     --az: 1;
 }
-
+ #dark-theme-img{
+    display: block;
+ }
+ #light-theme-img{
+    display: none;
+ }
 html {
   font-size: 100%; 
 }
@@ -35,7 +40,7 @@ h1 {
   font-size: calc(var(--index)*1.7); 
   line-height: 1.2;
   font-family: Fira-Sans;
-  color:var(--text-color);
+  color:white;
   margin-bottom: 3%;
 }
 
@@ -68,6 +73,7 @@ p, #search::placeholder,#search{
   line-height: 1.7;
   font-family:ALS-Schlange-Sans;
   color:var(--text-color);
+  
 }
 /* ------------------Typography-------------------- */
 #menu__toggle{
@@ -87,6 +93,9 @@ p, #search::placeholder,#search{
 .menu__box>li{
     display: flex;
     align-items:center;
+}
+.menu__box a{
+    color: white;
 }
 nav{
     width: 100%;
@@ -345,7 +354,7 @@ header{
   overflow: hidden;
   width: 100%;
   position: relative;
-  height: 75vh;
+  height: 55vh;
   grid-area: owww;
 }
 .our-works-work-wrapper::after {
@@ -366,6 +375,10 @@ header{
   padding: 0.5em 1em;
   border: 0.2em solid #22ABE2;
   cursor: pointer;
+    margin-bottom:calc(50px * var(--az)) ;
+}
+#arrow{
+    stroke: white;
 }
 .our-works-gallery-trigger img,.review-trigger img {
   max-width: 100%;
@@ -411,7 +424,7 @@ header{
   background-color: transparent;
   border: 0.2em solid #22ABE2;
 }
-.right-trigger>img {
+.right-trigger>svg {
   transform: rotate(180deg);
 }
 .our-works-counter-wrapper,.review-counter-wrapper {
@@ -439,6 +452,7 @@ header{
     background-color: #1F1F1F;
     
 }
+
 .review-gallery{
     margin-top: 5%;
     display: flex;
@@ -941,10 +955,60 @@ footer{
         margin: auto;
         margin-top: 6%;
     }
+    .reviews-heading>h2{
+        width: 70%;
+}
 }
     
 @media (prefers-color-scheme:light) {
-    body{
+    body,.reviews{
         background-color: #ffffff;
     }
-} 
+    :root{
+         --text-color:#151414;
+    }  
+        p{
+        color:#313131;
+  
+    }
+    .hero-info>p{
+        color: white;
+    }
+    .solution-card>*{
+        color: white;
+    }
+    .review-text {
+        background-color: #f4f4f4;
+        border-color: rgb(152, 152, 152);
+    }
+    .client-log {
+        background-color: #dedede;
+    }
+    #arrow{
+        stroke: #151414 !important;
+    }
+    .about-solutions-header>h2{
+        color: white;
+    }
+    header .button{
+        color: white;
+    } 
+    #search::placeholder,#search{
+        color: white;
+    }
+    .contact-us-text>*{
+        color: white;
+    }
+    .first-news-product>*, .second-news-product>*, .first-news-company>*, .second-news-company>*{
+        color: white;
+    }
+    .news{
+            background: radial-gradient(circle,rgb(255, 255, 255) 0%, rgb(117, 187, 214) 0%, rgb(183, 233, 255) 15%, rgb(255, 255, 255) 29%);
+    }
+    #dark-theme-img{
+        display: none;
+    }
+    .heading>img{
+        opacity: 1;
+    }
+}   
