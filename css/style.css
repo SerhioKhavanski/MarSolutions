@@ -1008,7 +1008,20 @@ footer{
     #dark-theme-img{
         display: none;
     }
+    #light-theme-img{
+        display: block;
+    }
     .heading>img{
         opacity: 1;
     }
 }   
+@media (prefers-color-scheme:light) and (max-width:900px){
+    .about-solutions-header>h2{
+        color: #151414;
+    }
+}
+@media (prefers-color-scheme:light) and (max-width:425px){
+    .about-solutions-header>h2{
+        color: #151414;
+    }
+}
