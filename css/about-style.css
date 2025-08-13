@@ -1,0 +1,160 @@
+header{
+    height:80vh;
+    background:url(../img/grid.png), linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.365) 60%, rgba(0, 0, 0, 0.097) 100%),  url(../img/about-hero-img.png) ;
+    background-size: cover;
+    background-repeat:no-repeat;
+    grid-template-columns:40% 60%; 
+    grid-template-rows:10% auto;
+
+}
+/* ---------------header-------------------- */
+.research{
+    padding: 0% 7%;
+}
+.research-info-header{
+    margin-bottom: calc(60px * var(--az));
+}
+.research-info{
+    width: 100%;
+    background-color: #2b2b2b72;
+    transform: translateY(calc(-80px * var(--az)));
+    backdrop-filter:blur(15px);
+    padding: calc(25px * var(--az));
+    height: 90vh;
+}
+.research-info-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.research-info-wrapper-cards{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.research-info-img-wrapper{
+    width: 30%;
+    padding-left: calc(40px * var(--az));
+}
+.research-info-img-wrapper>svg{
+    width: 100%;
+}
+.research-info-card{
+    background-color:var( --bg-coolr); 
+    width: calc(430px * var(--az));
+    height: calc(200px * var(--az));
+    padding: calc(30px * var(--az));
+    padding-bottom: calc(0px * var(--az));
+    margin-bottom: calc(100px * var(--az));
+}
+.research-info-card-img-wrapper{
+    width: calc(80px * var(--az));
+    height: calc(80px * var(--az));
+    padding:calc(20px * var(--az)) ;
+    background-color:var( --bg-coolr); 
+    transform: translateY(calc(10px * var(--az)));
+    box-shadow: 0 0 calc(10px * var(--az)) rgb(0, 0, 0);
+}
+.research-info-card-img-wrapper>img{
+    width: 100%;
+}
+.research-info-card:nth-child(3){
+    margin-left: calc(100px * var(--az));
+}
+.research-info-card:nth-child(2){
+    margin-right: calc(100px * var(--az));
+}
+/* -------------research--------------------- */
+.contact-us{
+       background:linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.815) 30%, rgba(0, 0, 0, 0.378) 60%, rgba(0, 0, 0, 0) 100%) ,url(../img/ourvision.png);
+       background-size:cover;
+}
+.contact-us-text{
+    position: relative;
+}
+.contact-us-text>img{
+    position: absolute;
+    bottom: 92%;
+    width: 13.8%;
+}
+.second_holder{
+    left: 80%;
+}
+/* -------------research--------------------- */
+@media (max-width:900px) {
+    header{
+            grid-template-areas: 
+                            "n n"
+                            "t t";
+        background:none, linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgb(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.437) 60%, rgba(0, 0, 0, 0) 100%),  url(../img/about-hero-img.png) ;
+        height:70vh;
+    }
+    /* ---------------header-------------------- */
+    .research-info-img-wrapper{
+        width: 100%
+    }
+    .research-info{
+        height: auto;
+    }
+    .research-info-img-wrapper>svg{
+        width: 60%;
+    }
+    .research-info-img-wrapper{
+        text-align: center;
+        padding-left: 0;
+    }
+    .research-info-wrapper-cards{
+        width: 100%;
+        margin-top: calc(40px * var(--az));
+        justify-content: space-between;
+    }
+    .research-info-header {
+        margin-bottom: calc(40px * var(--az));
+    }
+    .research-info-card:nth-child(3){
+        margin-left:0;
+    }
+    .research-info-card:nth-child(2){
+        margin-right:0;
+    }
+    .research-info-card {
+        width: calc(283px * var(--az));
+        height: calc(250px * var(--az));
+        margin-bottom: calc(70px * var(--az));
+    }
+
+    /* -------------research--------------------- */
+    .contact-us-text>img{
+        display: none;
+    }
+    
+}
+
+
+@media (max-width:425px){
+    header{
+        height: 60vh;
+        background:none, linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.365) 60%, rgba(0, 0, 0, 0.097) 100%),  url(../img/about-hero-img.png) ;
+    }
+    /* ---------------header-------------------- */
+
+}
+@media (prefers-color-scheme:light){
+    :root{
+         --bg-coolr:white;
+    }
+    .research-info-header>h2{
+        color: white;
+    }
+    .research-info-wrapper-cards{
+        justify-content: space-around;
+    }
+    .research-info-card-img-wrapper{
+        box-shadow: 0 0 calc(10px * var(--az)) rgb(188, 188, 188);
+    }
+    .research-info {
+        background-color: #c1c1c172;
+    }
+}
