@@ -79,7 +79,6 @@ header{
     background-color:var( --bg-coolr);
     padding: calc(10px * var(--az));
     right: 95%;
-    box-shadow: 0px 0px 10px var(--shadow);
 }
 .documentation-info-all-tablet-point-img-wrapper>img{
     width: 100%;
@@ -109,7 +108,60 @@ header{
 
 }
     /* _-------------------documentation-------------------------_ */
+.versions {
+    padding: 4% 7% 7% 7%;
+}
 
+.versions-all-accardions {
+    margin: 0% 5%;
+}
+
+.versions-accardion {
+    display: flex;
+    gap: 5%;
+    border: calc(2px * var(--az)) solid #22ABE2;
+    padding: calc(40px * var(--az));
+}
+
+.versions-accardion > img {
+    rotate: -90deg;
+    transition: rotate 0.3s ease;
+    cursor: pointer;
+}
+
+.versions-aacardion-info {
+    padding: 0 5%;
+    max-height: 0;
+    overflow-y: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        padding 0.3s ease;
+}
+
+.versions-aacardion-info.open {
+    padding: 4% 5%;
+    max-height: 1000px;
+    opacity: 1;
+    overflow-y: auto;
+}
+
+.versions-aacardion-info>p{
+    margin-bottom: 4%;
+}
+.law-header{
+    flex-direction: row-reverse;
+}
+.versions-all-accardions{
+    margin: 4%;
+}
+.versions-accardion{
+    margin-bottom:4% ;
+}
+.arrow.open{
+    rotate: 0deg;
+}
 
 
 @media(max-width:900px){
@@ -171,8 +223,9 @@ header{
     .documentation-info-all-tablet-point{
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: calc(280px * var(--az));
         padding: calc(10px * var(--az));
+        padding-left: calc(30px * var(--az));
     }
     .documentation-info-all-tablet-point-img-wrapper{
         width: calc(40px * var(--az));
@@ -196,3 +249,27 @@ header{
         margin-top: 0%;
     }
 }
+@media(max-width:320px){
+    .documentation-info-all-tablet-point{
+        width: calc(220px * var(--az));
+    }
+    .versions-accardion{
+        padding: 5%;
+    }
+}
+@media(max-width:900px) and (prefers-color-scheme:light){
+    .documentation-info-all-tablet-point-text>*{
+        color:white;
+    }
+}
+@media(max-width:425px) and (prefers-color-scheme:light){
+    .documentation-info-all-tablet-point-text>*{
+        color: #151414;
+    }
+}
+@media(prefers-color-scheme:light){
+    .documentation-info-all-tablet-point-text>*{
+        color: #ffffff;
+    }
+}
+

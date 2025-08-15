@@ -440,3 +440,12 @@ header{
         background-color: #c1c1c172;
     }
 }
+
+@media (max-width:425px){
+    .our-history-card {
+        width: calc(220px * var(--az));
+    }
+    .our-culture-info-card {
+        width: calc(220px * var(--az));
+    }
+}

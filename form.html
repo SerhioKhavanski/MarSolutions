@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'"> -->
+
+    <title>Marsolutions</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="shortcut icon" href="img/Logo_Mar_solutions.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="video-overlay"></div>
+        <!--------------- video -------------------->
+        <nav>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="index.html"><img src="img/Logo_Mar_solutions_full.png
+                        " alt=""></a></li>
+                    <li><a class="menu__item" href="index.html">Главная</a></li>
+                    <li><a class="menu__item" href="about.html">О нас</a></li>
+                    <li><a class="menu__item" href="our-producr.html">Наши продукты</a></li>
+                    <li><a class="menu__item" href="resources.html">Ресурсы</a></li>
+                    <li><a class="menu__item__end" href="#contacts">Контакты</a></li>
+                    <li class="search"> <input id="search" type="text" placeholder="Поиск..."> <a class="button secondary secondaryMenu" href="#">Связаться</a></li>
+                </ul>
+            </div>
+            <!------------------------- menu ----------------------------->
+        </nav>
+
+        
+    </header>
+<!------------------------- Header ----------------------------->
+
+    <main>
+    <div class="big-form">
+        <h2 class="contact-title">Напишите нам</h2>
+
+    <form class="contact-form" action="#" method="post">
+        <label class="contact-label">
+        Имя
+        <input class="contact-input" type="text" name="name" placeholder="Введите ваше имя" required>
+        </label>
+
+        <label class="contact-label">
+        Email
+        <input class="contact-input" type="email" name="email" placeholder="Введите ваш Email" required>
+        </label>
+
+        <label class="contact-label">
+        Номер телефона
+        <input class="contact-input" type="tel" name="phone" placeholder="Введите ваш номер телефона">
+        </label>
+
+        <label class="contact-label">
+        Ваше сообщение
+        <textarea class="contact-textarea" name="message" placeholder="Введите текст вашего сообщения"></textarea>
+        </label>
+
+        <label class="contact-consent">
+        <input type="checkbox" name="consent" required>
+        Даю согласие на обработку персональных данных
+        </label>
+
+        <button class="button" type="submit">Заказать</button>
+    </form>
+</div>
+    </main>
+    <!------------------------- main ----------------------------->
+    <footer id="contacts">
+        <div class="footer-main-info">
+            <img src="img/Logo_Mar_solutions_full.png" id="dark-theme-img"  alt="">
+            <img src="img/Logo_Mar_solutions_full_light_theme.png" id="light-theme-img" alt="">
+            <p>
+                Этот сайт — ваша точка опоры и источник вдохновения.   Мы собрали здесь всё важное: от миссии проекта до свежих новостей.   Каждый раздел отражает нашу философию — ясно, доступно, честно.
+            </p>
+        </div>
+        <div class="map">
+            <h2>
+                Заголовок
+            </h2>
+            <ul class="map-point">
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+            </ul>
+
+        </div>
+    
+        <div class="map">
+            <h2>
+                Заголовок
+            </h2>
+            <ul class="map-point">
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+            </ul>
+
+        </div>
+        <div class="map last-point">
+            <h2>
+                Заголовок
+            </h2>
+            <ul class="map-point ">
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+                <li><a href="">нажми на меня</a></li>
+            </ul>
+
+        </div>
+        <div class="location">
+            <h2>Заголовок</h2>
+            <div class="location-info">
+                <div class="location-info-img-wrapper">
+                    <img src="img/location.png" alt="">
+                </div>
+                <div class="location-info-text">
+                    <h3>Заголовок</h3>
+                    <p>Адресс</p>
+                </div>
+            </div>
+
+            <div class="location-info">
+                <div class="location-info-img-wrapper">
+                    <img src="img/location.png" alt="">
+                </div>
+                <div class="location-info-text">
+                    <h3>Заголовок</h3>
+                    <p>Адресс</p>
+                </div>
+            </div>
+
+            <div class="location-info">
+                <div class="location-info-img-wrapper">
+                    <img src="img/location.png" alt="">
+                </div>
+                <div class="location-info-text">
+                    <h3>Заголовок</h3>
+                    <p>Адресс</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <script src="js/az.js"></script>
+     <script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

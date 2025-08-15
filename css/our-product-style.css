@@ -246,3 +246,13 @@ header{
     }
     
 }
+@media(max-width:320px){
+    .why-us-info-card {
+        width: calc(250px * var(--az));
+    }
+    .additional-offers-card-img-wrapper {
+        width: calc(200px * var(--az));
+        height: calc(200px * var(--az));
+        bottom: 78%;
+    }
+}
