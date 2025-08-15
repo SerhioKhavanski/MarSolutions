@@ -4,6 +4,7 @@ header{
         grid-template-areas: 
                         "n n"
                         "t t";
+    height: 70vh;
 }
 .hero-info{
     margin-top: 7%;

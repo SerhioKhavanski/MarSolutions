@@ -1,0 +1,198 @@
+header{
+    background-image: url(../img/grid_2.svg), url(../img/document-hero-placeholder.png);
+    background-size:100% ;
+    height: 70vh;
+
+}
+.cta{
+    justify-content: center;
+    margin-top: 4%;
+}
+    /* _-------------------header-------------------------_ */
+.how-it-works{
+    margin: 7% 0;
+    padding: 0 7%;
+}
+.how-it-works-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4%;
+}
+.how-it-works-card{
+    flex-wrap: wrap;
+    background-color:var( --bg-coolr); 
+    width: 100%;
+    padding: calc(30px * var(--az));
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 calc(40px * var(--az)) var(--shadow);
+
+}
+.how-it-works-card>img{
+    width: 50%;
+    margin-bottom: 0%;
+}
+.how-it-works-card-text-wrapper{
+    width: 45%;
+}
+.how-it-works-path-wrapper{
+    width: 10%;
+}
+.how-it-works-path-wrapper>img{
+    width: 40%;
+}
+.how-it-works-cards-wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+    /* _-------------------how-it-works-------------------------_ */
+
+.documentation-header{
+    padding-inline:7% ;
+    flex-direction: row-reverse;
+}
+.documentation-info{
+    background-image: url(../img/documentation-BG-placeholder.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    height: 110vh;
+}
+.documentation-info-all-tablet-point{
+    display: flex;
+    justify-content: space-between;
+    width: calc(480px * var(--az));
+    background-color:var(--glsssBG);
+    backdrop-filter:blur(10px);
+    border:calc(2px * var(--az)) solid #22ABE2;
+    padding: calc(10px * var(--az));
+    padding-left: calc(60px * var(--az));
+    position: relative;
+}
+.documentation-info-all-tablet-point-img-wrapper{
+    width: calc(70px * var(--az));
+    height: calc(70px * var(--az));
+    position: absolute;
+    background-color:var( --bg-coolr);
+    padding: calc(10px * var(--az));
+    right: 95%;
+    box-shadow: 0px 0px 10px var(--shadow);
+}
+.documentation-info-all-tablet-point-img-wrapper>img{
+    width: 100%;
+
+}
+.documentation-info-all-tablet{
+
+    position: relative;
+}
+.documentation-info-all-tablet-points{
+    position: absolute;
+    left: 30%;
+    bottom:15%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.documentation-info-all{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 7%;
+    flex-wrap: wrap;
+}
+.documentation-info-all-tablet>img{
+        width: calc(545px * var(--az));
+
+}
+    /* _-------------------documentation-------------------------_ */
+
+
+
+@media(max-width:900px){
+    header{
+    background-image: NONE, url(../img/document-hero-placeholder.png);
+    background-size:cover;
+    background-position: center;
+    height: 70vh;
+    }
+ /* _-------------------header-------------------------_ */
+    .cta{
+        justify-content: center;
+        margin-top: 8%;
+        margin-bottom: 0%;
+    }
+    .how-it-works-card>img{
+        width: 100%;
+    }
+    .how-it-works-card-text-wrapper{
+        width: 100%;
+    }
+    .how-it-works-path-wrapper>img{
+        width: 100%;
+    }
+    .how-it-works-path-wrapper{
+        width: 12%;
+    }
+    .how-it-works-info{
+        margin-top: 8%;
+    }
+ /* _-------------------how-it-works-------------------------_ */
+    .documentation-info{
+        background-image: none;
+        background-size:100%;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+    .documentation-info-all-tablet-points{
+        bottom:12%;
+    }
+     /* _-------------------documentation-------------------------_ */
+}
+
+@media(max-width:425px){
+    .how-it-works-path-wrapper{
+        display: none;
+    }
+    .how-it-works-cards-wrapper{
+        width: 100%;
+    }
+    .how-it-works-info{
+
+        margin-top: 15%;
+    }
+    .how-it-works-card>img{
+        margin-bottom: 6%;
+    }
+     /* _-------------------how-it-works-------------------------_ */
+    .documentation-info-all-tablet-point{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: calc(10px * var(--az));
+    }
+    .documentation-info-all-tablet-point-img-wrapper{
+        width: calc(40px * var(--az));
+        height: calc(40px * var(--az));
+    }
+    .documentation-info-all-tablet-points{
+        position: static;
+    }
+    .documentation-info-all-tablet>img{
+        display: none;
+    }
+    .documentation-info-all{
+        justify-content: center;
+    }
+    .documentation-info-all-tablet-points{
+        margin-top: 3vh;
+        gap: 3vh;
+
+    }
+    .documentation-info-all {
+        margin-top: 0%;
+    }
+}
