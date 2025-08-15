@@ -1,0 +1,247 @@
+header{
+    background-image:url(../img/grid_2.svg), url(../img/our-product-hero.png);
+    background-size:cover;
+        grid-template-areas: 
+                        "n n"
+                        "t t";
+}
+.hero-info{
+    margin-top: 7%;
+    text-align: center;
+}
+.hero-info>p{
+    width: 70%;
+    margin: auto;
+}
+/*--------------------hedaer------------------*/
+.why-us{
+    padding: 7%;
+}
+.why-us>p{
+    width: 40%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+.why-us-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.why-us-info-img{
+    width: 50%;
+    background-image:url(../img/why-us-placeholder-img.png) ;
+    background-size: cover;
+
+}
+.why-us-info-card{
+    border:calc(2px * var(--az)) solid #22ABE2;
+    background-color:var( --bg-coolr); 
+    width: calc(360px * var(--az));
+    padding: calc(30px * var(--az));   
+}
+.why-us-info-card>img{
+    width: 20%;
+    margin-bottom: 8%;
+}
+.why-us-info-all-cards-wrapper{
+    width: 47%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.why-us-info-first-cards-wrapper>.why-us-info-card:first-child{
+    margin-bottom: 15%;
+}
+.why-us-info-second-cards-wrapper>.why-us-info-card:first-child{
+    margin-bottom: 15%;
+}
+.why-us-info-second-cards-wrapper{
+    transform: translateY(-10.5%);
+}
+/*-----------------------why-us------------------------*/
+.about-solutions-header{
+    flex-direction: row-reverse;
+}
+/*-----------------------.about-solutions------------------------*/
+    .additional-offers{
+        padding: 7%;
+    }
+    .additional-offers-card>h3{
+        margin-bottom: 4%;
+    }
+    .additional-offers-card{
+        width: calc(520px * var(--az));
+        height: calc(700px * var(--az));
+         padding: calc(45px * var(--az));  
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         margin-top: 18%;
+         
+    }
+    .additional-offers-card-img-wrapper>img{
+        width: 100%;
+    }
+    .additional-offers-card-img-wrapper{
+        background-color:var( --bg-coolr); 
+        width: calc(430px * var(--az));
+        height: calc(430px * var(--az));
+        padding: calc(30px * var(--az));
+        box-shadow: 0 0 calc(10px * var(--az)) var(--shadow);
+        position: absolute;
+        bottom:72%;
+    }
+    .additional-offers-info{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+/*-----------------------additional-offers------------------------*/
+.our-revards-heading{
+    padding-inline: 7%;
+    flex-direction: row-reverse;
+}
+.carousel-item
+ {
+    width: 44%;
+ }
+ .product-news{
+    padding: 7%;
+ }
+/*-----------------------our-revards-heading------------------------*/
+.product-news-card1{
+    grid-area: pnc1;
+}
+.product-news-card2{
+    grid-area: pnc2;
+}
+.product-news-card3{
+    grid-area: pnc3;
+}
+.product-news-card4{
+    grid-area: pnc4;
+}
+.product-news-info{
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40vh 40vh;
+    gap: 2vw;
+    grid-template-areas:"pnc1 pnc2 pnc2"
+                        "pnc1 pnc3 pnc4";
+}
+.product-news-info>*{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: calc(20px * var(--az));
+    border: calc(8px * var(--az)) solid #2b2b2b;
+}
+.product-news-info>*>p{
+    margin-bottom:  calc(20px * var(--az));
+}
+@media(max-width:900px){
+    header{
+        height: 60vh;
+    }
+    .hero-info>p{
+        width: 100%;
+        margin-top: 5%;
+    }
+    /* --------------------header------------------ */
+    .why-us-info-img{
+        width: 100%;
+        height: 60vh;
+    }
+    .why-us-info-all-cards-wrapper{
+        margin-top: 8%;
+        width: 100%;
+    }
+    .why-us-info-card{
+        width: calc(305px * var(--az));
+    }
+    .why-us-info-second-cards-wrapper{
+        transform:none;
+    }
+    .why-us>p {
+        width: 100%;
+    }
+        /* --------------------why-us------------------ */
+    .additional-offers-card-img-wrapper{
+        background-color:var( --bg-coolr); 
+        width: calc(250px * var(--az));
+        height: calc(250px * var(--az));
+        bottom:90%;
+        
+    }
+    .additional-offers-card{
+        width: calc(320px * var(--az));
+        height: calc(600px * var(--az));
+         padding: calc(30px * var(--az));
+         margin-top: 36%;
+    }  
+    .product-news-info{
+        margin-top: 4%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh 50vh 30vh 30vh;
+        gap: 2vw;
+        grid-template-areas:"pnc1"
+                            "pnc2"
+                            "pnc3"
+                            "pnc4";
+    }
+        /*-----------------------additional-offers------------------------*/
+}
+@media(max-width:425px){
+    .hero-info>p{
+        margin-top: 10%;
+    }
+     /* --------------------header------------------ */
+    .why-us-info-img{
+        width: 100%;
+        height: 30vh;
+    }
+    .why-us-info-all-cards-wrapper{
+        justify-content: center;
+        margin-top: 15%;
+    }
+    .why-us-info-first-cards-wrapper>.why-us-info-card:last-child{
+        margin-bottom: 15%;
+    }
+     /* --------------------why-us------------------ */
+     .additional-offers-info{
+        justify-content: center;
+     }
+     .additional-offers-card-img-wrapper{
+        bottom: 80%;
+     }
+     .additional-offers-card{
+        margin-top: 48%;
+     }
+          /* --------------------.additional-offers-info------------------ */
+     .carousel-item
+    {
+        width: 48%;
+    }
+     /* --------------------additional-offers------------------ */
+    .product-news-info{
+        margin-top: 10%;
+        gap: 8vw;
+    }
+        .additional-offers-card {
+                    margin-top: 55%;
+        height: calc(430px * var(--az));
+    }
+}
+@media (prefers-color-scheme:light){
+    .product-news-info>*>p,.product-news-info>*>h3,.product-news-info>*>a{
+        color: white;
+    }
+    .product-news-info>*{
+        border-color:rgb(198, 198, 198);
+    }
+    
+}
