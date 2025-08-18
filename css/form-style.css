@@ -76,3 +76,7 @@ header{
 button{
     border:none
 }
+#condition{
+  appearance: none;
+  border:;
+}
